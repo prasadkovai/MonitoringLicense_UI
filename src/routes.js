@@ -25,6 +25,13 @@ import Icons from "views/examples/Icons.jsx";
 
 var routes = [
   {
+    path: "/login",
+    name: "Login",
+    icon: "ni ni-key-25 text-info",
+    component: Login,
+    layout: "/auth"
+  },
+  {
     path: "/index",
     name: "Dashboard",
     icon: "ni ni-tv-2 text-primary",
@@ -59,13 +66,7 @@ var routes = [
     component: Tables,
     layout: "/admin"
   },
-  {
-    path: "/login",
-    name: "Login",
-    icon: "ni ni-key-25 text-info",
-    component: Login,
-    layout: "/auth"
-  },
+  
   {
     path: "/register",
     name: "Register",

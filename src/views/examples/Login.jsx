@@ -22,7 +22,7 @@ import {
   Button,
   Card,
   CardHeader,
-  CardBody,
+  //CardBody,
   FormGroup,
   Form,
   Input,
@@ -39,44 +39,9 @@ class Login extends React.Component {
       <>
         <Col lg="5" md="7">
           <Card className="bg-secondary shadow border-0">
-            <CardHeader className="bg-transparent pb-5">
-              <div className="text-muted text-center mt-2 mb-3">
-                <small>Sign in with</small>
-              </div>
-              <div className="btn-wrapper text-center">
-                <Button
-                  className="btn-neutral btn-icon"
-                  color="default"
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-                  <span className="btn-inner--icon">
-                    <img
-                      alt="..."
-                      src={require("assets/img/icons/common/github.svg")}
-                    />
-                  </span>
-                  <span className="btn-inner--text">Github</span>
-                </Button>
-                <Button
-                  className="btn-neutral btn-icon"
-                  color="default"
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-                  <span className="btn-inner--icon">
-                    <img
-                      alt="..."
-                      src={require("assets/img/icons/common/google.svg")}
-                    />
-                  </span>
-                  <span className="btn-inner--text">Google</span>
-                </Button>
-              </div>
-            </CardHeader>
-            <CardBody className="px-lg-5 py-lg-5">
+              <CardHeader className="px-lg-5 py-lg-5">
               <div className="text-center text-muted mb-4">
-                <small>Or sign in with credentials</small>
+                <small>sign in with credentials</small>
               </div>
               <Form role="form">
                 <FormGroup className="mb-3">
@@ -99,7 +64,7 @@ class Login extends React.Component {
                     <Input placeholder="Password" type="password" />
                   </InputGroup>
                 </FormGroup>
-                <div className="custom-control custom-control-alternative custom-checkbox">
+                {/* <div className="custom-control custom-control-alternative custom-checkbox">
                   <input
                     className="custom-control-input"
                     id=" customCheckLogin"
@@ -109,16 +74,36 @@ class Login extends React.Component {
                     className="custom-control-label"
                     htmlFor=" customCheckLogin"
                   >
-                    <span className="text-muted">Remember me</span>
+                     <span className="text-muted">Remember me</span> 
                   </label>
-                </div>
+                </div> */}
                 <div className="text-center">
                   <Button className="my-4" color="primary" type="button">
-                    Sign in
+                    Login
                   </Button>
                 </div>
+                <div className="text-muted text-center mt-2 mb-3">
+                <small>Or Sign in with</small>
+              </div>
+              <div className="btn-wrapper text-center">
+              <Button
+                  className="btn-neutral btn-icon"
+                  color="default"
+                  href="#pablo"
+                  onClick={e => e.preventDefault()}
+                > 
+                  <span className="btn-inner--icon">
+                    <img
+                      alt="..."
+                      src={require("assets/img/icons/common/google.svg")}
+                    />
+                  </span>
+                  <span className="btn-inner--text">Google</span>
+                </Button>
+              </div>
               </Form>
-            </CardBody>
+            </CardHeader>
+           
           </Card>
           <Row className="mt-3">
             <Col xs="6">
@@ -133,10 +118,10 @@ class Login extends React.Component {
             <Col className="text-right" xs="6">
               <a
                 className="text-light"
-                href="#pablo"
+                href="/auth/register"
                 onClick={e => e.preventDefault()}
               >
-                <small>Create new account</small>
+                <small>signup</small>
               </a>
             </Col>
           </Row>
