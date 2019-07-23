@@ -85,8 +85,8 @@ class Login extends React.Component {
                 <div className="text-muted text-center mt-2 mb-3">
                 <small>Or Sign in with</small>
               </div>
-              <div className="btn-wrapper text-center">
-              <Button
+              {/*<div className="btn-wrapper text-center">
+               <Button
                   className="btn-neutral btn-icon"
                   color="default"
                   href="#pablo"
@@ -99,8 +99,11 @@ class Login extends React.Component {
                     />
                   </span>
                   <span className="btn-inner--text">Google</span>
-                </Button>
-              </div>
+                </Button> 
+              </div>*/}
+              <center>
+              <div class="g-signin2" data-onsuccess="onSignIn"></div>
+              </center>
               </Form>
             </CardHeader>
            

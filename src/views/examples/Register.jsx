@@ -74,6 +74,15 @@ class Register extends React.Component {
                     </InputGroupAddon>
                     <Input placeholder="Password" type="password" />
                   </InputGroup>
+                  <br/>
+                  <InputGroup className="input-group-alternative">
+                    <InputGroupAddon addonType="prepend">
+                      <InputGroupText>
+                        <i className="ni ni-lock-circle-open" />
+                      </InputGroupText>
+                    </InputGroupAddon>
+                    <Input placeholder="Confirm-Password" type="password" />
+                  </InputGroup>
                 </FormGroup>
                 <div className="text-muted font-italic">
                   <small>
@@ -114,8 +123,8 @@ class Register extends React.Component {
               <div className="text-muted text-center mt-2 mb-4">
                 <small>Or Sign up with</small>
               </div>
-              <div className="text-center">
-                {/* <Button
+               {/*<div className="text-center">
+                <Button
                   className="btn-neutral btn-icon mr-4"
                   color="default"
                   href="#pablo"
@@ -128,7 +137,7 @@ class Register extends React.Component {
                     />
                   </span>
                   <span className="btn-inner--text">Github</span>
-                </Button> */}
+                </Button> 
                 <Button
                   className="btn-neutral btn-icon"
                   color="default"
@@ -143,7 +152,10 @@ class Register extends React.Component {
                   </span>
                   <span className="btn-inner--text">Google</span>
                 </Button>
-              </div>
+              </div>*/}
+              <center>
+              <div class="g-signin2" data-onsuccess="onSignIn"></div>
+              </center>
             </CardHeader>
           </Card>
         </Col>
