@@ -875,8 +875,8 @@ pre {
     flex: 0 0 33.33333%;
     max-width: 33.33333%; }
   .col-lg-5 {
-    flex: 0 0 41.66667%;
-    max-width: 41.66667%; }
+    flex: 0 0 37.66667%;
+    max-width: 37.66667%; }
   .col-lg-6 {
     flex: 0 0 50%;
     max-width: 50%; }
@@ -5874,6 +5874,9 @@ button.bg-darker:focus {
 .mb-7,
 .my-7 {
   margin-bottom: 6rem !important; }
+  .mb-8,
+.my-8 {
+  margin-bottom: 1rem !important; }
 
 .ml-7,
 .mx-7 {
@@ -6017,15 +6020,15 @@ button.bg-darker:focus {
 
 .pt-5,
 .py-5 {
-  padding-top: 3rem !important; }
+  padding-top: -2rem !important; }
 
 .pr-5,
 .px-5 {
-  padding-right: 3rem !important; }
+  padding-right: -1rem !important; }
 
 .pb-5,
 .py-5 {
-  padding-bottom: 3rem !important; }
+  padding-bottom: 1rem !important; }
 
 .pl-5,
 .px-5 {
@@ -6226,7 +6229,7 @@ button.bg-darker:focus {
 
 .pt-7,
 .py-7 {
-  padding-top: 6rem !important; }
+  padding-top: 2rem !important; }
 
 .pr-7,
 .px-7 {
@@ -6234,7 +6237,7 @@ button.bg-darker:focus {
 
 .pb-7,
 .py-7 {
-  padding-bottom: 6rem !important; }
+  padding-bottom: 4rem !important; }
 
 .pl-7,
 .px-7 {

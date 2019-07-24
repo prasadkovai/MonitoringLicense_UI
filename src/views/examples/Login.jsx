@@ -33,11 +33,15 @@ import {
   Col
 } from "reactstrap";
 import { GoogleLogin } from 'react-google-login';
+//import { browserHistory } from 'react-router'
 
 const responseGoogle = (response) => {
   //console.log(response,'Sucess');
  console.log(response,'response');
-  
+ //this.context.router.push('/admin/user-profile');
+ //responseGoogle.push(<Redirect key="Register" to="/admin/user-profile" />);
+ //browserHistory.push('/admin/user-profile');
+ 
 }
 const errorresponseGoogle = (response) => {
   console.log(response,'error');
@@ -49,8 +53,8 @@ class Login extends React.Component {
         <Col lg="5" md="7">
           <Card className="bg-secondary shadow border-0">
               <CardHeader className="px-lg-5 py-lg-5">
-              <div className="text-center text-muted mb-4">
-                <small>sign in with credentials</small>
+              <div className="text-center">
+                <small><b>Log in to your account</b></small>
               </div>
               <Form role="form">
                 <FormGroup className="mb-3">
@@ -92,7 +96,7 @@ class Login extends React.Component {
                   </Button>
                 </div>
                 <div className="text-muted text-center mt-2 mb-3">
-                <small>Or Sign in with</small>
+                <small>OR</small>
               </div>
               {/*<div className="btn-wrapper text-center">
                <Button
@@ -113,18 +117,24 @@ class Login extends React.Component {
               <center>
               <GoogleLogin
       clientId="126283259447-guhcr4q2497j4ctvvs2p7latuodho4nd.apps.googleusercontent.com"
-      buttonText="Login"
+      buttonText="Log in with Google"
       onSuccess={responseGoogle}
       onFailure={errorresponseGoogle}
       cookiePolicy={'single_host_origin'}
       
     />
+    <br/>
+     <br/>
+       Can't log in? .
+Sign up for an account
               </center>
+             
+            
               </Form>
             </CardHeader>
            
           </Card>
-          <Row className="mt-3">
+          {/* <Row className="mt-3">
             <Col xs="6">
               <a
                 className="text-light"
@@ -143,7 +153,7 @@ class Login extends React.Component {
                 <small>signup</small>
               </a>
             </Col>
-          </Row>
+          </Row> */}
         </Col>
       </>
     );

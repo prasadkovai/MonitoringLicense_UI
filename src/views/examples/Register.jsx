@@ -32,7 +32,18 @@ import {
   Row,
   Col
 } from "reactstrap";
-
+import { GoogleLogin } from 'react-google-login';
+const responseGoogle = (response) => {
+  //console.log(response,'Sucess');
+ console.log(response,'response');
+ //this.context.router.push('/admin/user-profile');
+ //responseGoogle.push(<Redirect key="Register" to="/admin/user-profile" />);
+ //browserHistory.push('/admin/user-profile');
+ 
+}
+const errorresponseGoogle = (response) => {
+  console.log(response,'error');
+}
 class Register extends React.Component {
   render() {
     return (
@@ -42,7 +53,7 @@ class Register extends React.Component {
             
             <CardBody className="px-lg-5 py-lg-5">
               <div className="text-center text-muted mb-4">
-                <small>sign up with credentials</small>
+                <small><b>Sign up for your account</b></small>
               </div>
               <Form role="form">
                 <FormGroup>
@@ -74,7 +85,7 @@ class Register extends React.Component {
                     </InputGroupAddon>
                     <Input placeholder="Password" type="password" />
                   </InputGroup>
-                  <br/>
+                  {/* <br/>
                   <InputGroup className="input-group-alternative">
                     <InputGroupAddon addonType="prepend">
                       <InputGroupText>
@@ -82,46 +93,45 @@ class Register extends React.Component {
                       </InputGroupText>
                     </InputGroupAddon>
                     <Input placeholder="Confirm-Password" type="password" />
-                  </InputGroup>
+                  </InputGroup> */}
                 </FormGroup>
-                <div className="text-muted font-italic">
+                {/* <div className="text-muted font-italic">
                   <small>
                     password strength:{" "}
                     <span className="text-success font-weight-700">strong</span>
                   </small>
-                </div>
+                </div> */}
                 <Row className="my-4">
                   <Col xs="12">
                     <div className="custom-control custom-control-alternative custom-checkbox">
-                      <input
+                      {/* <input
                         className="custom-control-input"
                         id="customCheckRegister"
                         type="checkbox"
-                      />
-                      <label
-                        className="custom-control-label"
-                        htmlFor="customCheckRegister"
-                      >
+                      /> */}
+                     
                         <span className="text-muted">
-                          I agree with the{" "}
+                          {/* I agree with the{" "}
                           <a href="#pablo" onClick={e => e.preventDefault()}>
                             Privacy Policy
-                          </a>
+                          </a> */}
+                          By signing up, you confirm that you’ve read
+and accepted our User Notice and Privacy Policy.
                         </span>
-                      </label>
+                     
                     </div>
                   </Col>
                 </Row>
                 <div className="text-center">
                   <Button className="mt-4" color="primary" type="button">
-                    Create account
+                  Sign up
                   </Button>
                 </div>
               </Form>
             </CardBody>
             <CardHeader className="bg-transparent pb-5">
               <div className="text-muted text-center mt-2 mb-4">
-                <small>Or Sign up with</small>
+                <small>OR</small>
               </div>
                {/*<div className="text-center">
                 <Button
@@ -154,7 +164,14 @@ class Register extends React.Component {
                 </Button>
               </div>*/}
               <center>
-              <div class="g-signin2" data-onsuccess="onSignIn"></div>
+              <GoogleLogin
+      clientId="126283259447-guhcr4q2497j4ctvvs2p7latuodho4nd.apps.googleusercontent.com"
+      buttonText="Continue with Google"
+      onSuccess={responseGoogle}
+      onFailure={errorresponseGoogle}
+      cookiePolicy={'single_host_origin'}
+      
+    />
               </center>
             </CardHeader>
           </Card>
