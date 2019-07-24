@@ -18,7 +18,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 // reactstrap components
-import { Container, Row } from "reactstrap";//Col
+import { Container, Row,Col } from "reactstrap";
 
 // core components
 import AuthNavbar from "components/Navbars/AuthNavbar.jsx";
@@ -31,7 +31,7 @@ class Auth extends React.Component {
     document.body.classList.add("bg-default");
   }
   componentWillUnmount() {
-    document.body.classList.remove("bg-default");
+    document.body.classList.remove("default");
   }
   getRoutes = routes => {
     return routes.map((prop, key) => {
@@ -67,8 +67,15 @@ class Auth extends React.Component {
                 </Row>
               </div>
             </Container> */}
+            <Container>
+            <div className="header-body text-center mb-7">
+            <Row className="justify-content-center">
+                  <Col lg="5" md="6"><img src={require('../assets/img/brand/Guidanz Logo Reversed.png')}  /></Col>
+                  </Row>
+            </div>
+            </Container>
             <div className="separator separator-bottom separator-skew zindex-100">
-              <svg
+              {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="none"
                 version="1.1"
@@ -80,7 +87,7 @@ class Auth extends React.Component {
                   className="fill-default"
                   points="2560 0 2560 100 0 100"
                 />
-              </svg>
+              </svg> */}
             </div>
           </div>
           {/* Page content */}

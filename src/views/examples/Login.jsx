@@ -32,7 +32,16 @@ import {
   Row,
   Col
 } from "reactstrap";
+import { GoogleLogin } from 'react-google-login';
 
+const responseGoogle = (response) => {
+  //console.log(response,'Sucess');
+ console.log(response,'response');
+  
+}
+const errorresponseGoogle = (response) => {
+  console.log(response,'error');
+}
 class Login extends React.Component {
   render() {
     return (
@@ -102,7 +111,14 @@ class Login extends React.Component {
                 </Button> 
               </div>*/}
               <center>
-              <div class="g-signin2" data-onsuccess="onSignIn"></div>
+              <GoogleLogin
+      clientId="126283259447-guhcr4q2497j4ctvvs2p7latuodho4nd.apps.googleusercontent.com"
+      buttonText="Login"
+      onSuccess={responseGoogle}
+      onFailure={errorresponseGoogle}
+      cookiePolicy={'single_host_origin'}
+      
+    />
               </center>
               </Form>
             </CardHeader>
